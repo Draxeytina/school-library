@@ -5,7 +5,11 @@ class Rental
     @date = date
     @book = book
     @person = person
-    person.rentals << self
-    book.rentals << self
+    book.rentals.push(self)
+    person.rentals.push(self)
+  end
+
+  def list_rentals
+    "#{@date} - #{@book.title} by #{@book.author}"
   end
 end
