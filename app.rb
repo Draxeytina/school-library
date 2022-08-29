@@ -38,8 +38,4 @@ class App
       end
     end
   end
-
-  def run
-    display_menu
-  end
 end

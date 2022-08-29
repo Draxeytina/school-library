@@ -2,7 +2,7 @@ require './app'
 
 def main
   app = App.new
-  app.run
+  app.display_menu
 end
 
 main
