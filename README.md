@@ -23,6 +23,17 @@ To access and change the code on your computer (using GIT):
 * <a href="https://twitter.com/tinamura2">Twitter</a>
 * <a href="https://www.linkedin.com/in/timothy-tinashe-murambinda/">LinkedIn</a>
 
+:bust_in_silhouette: Worash Abocherugn
+* <a href="https://github.com/worashf?">Github</a>
+* <a href="https://twitter.com/tinamura2">Twitter</a>
+* <a href="https://www.linkedin.com/in/timothy-tinashe-murambinda/">LinkedIn</a>
+
+:bust_in_silhouette: Emmanuel Orji-Ihuoma
+* <a href="https://github.com/emmiiorji/">Github</a>
+* <a href="https://twitter.com/emmiiorji">Twitter</a>
+* <a href="https://www.linkedin.com/in/orji-emmanuel/">LinkedIn</a>
+
+
 ## :star2: Show your support
 Give a :star: if you like our project!
 
