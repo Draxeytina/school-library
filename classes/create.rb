@@ -11,8 +11,7 @@ module Create
   def retrieve(string)
     label = string.capitalize
     print "#{label}: "
-    string = gets.chomp
-    return string
+    gets.chomp
   end
 
   def creator(array, item)
@@ -31,7 +30,7 @@ module Create
 
   def create_teacher
     age = retrieve('age')
-    name =retrieve('name')
+    name = retrieve('name')
     specialization = retrieve('specialization')
     new_teacher = Teacher.new(specialization, age, name, parent_permission: true)
     creator(@persons, new_teacher)
