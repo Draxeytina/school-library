@@ -2,7 +2,7 @@ module Display
   def list_all_books
     puts "No books available\n\n" if @books.empty?
     @books.each do |book|
-      print "Title: \"#{book.title}\", Author: \"#{book.author}\"\n"
+      print "Title: #{book.title}, Author: #{book.author}\n"
     end
     puts "\n"
   end
