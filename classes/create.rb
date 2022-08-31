@@ -8,34 +8,40 @@ module Create
     true if %w[y Y].include? response
   end
 
+  def retrieve(string)
+    label = string.capitalize
+    print "#{label}: "
+    gets.chomp
+  end
+
+  def creator(array, item)
+    array.push(item)
+  end
+
   def create_student
-    print 'Age: '
-    age = gets.chomp
-    print 'Name: '
-    name = gets.chomp
+    age = retrieve('age')
+    name = retrieve('name')
     print 'Has parent permission? [Y/N]: '
     parent_permission = check_response(gets.chomp)
-    @persons.push(Student.new(@classroom, age, name, parent_permission: parent_permission))
+    new_student = Student.new(@classroom, age, name, parent_permission: parent_permission)
+    creator(@persons, new_student)
     puts "Student has been successfully created! \n\n"
   end
 
   def create_teacher
-    print 'Age: '
-    age = gets.chomp
-    print 'Name: '
-    name = gets.chomp
-    print 'Specialization: '
-    specialization = gets.chomp
-    @persons.push(Teacher.new(specialization, age, name))
+    age = retrieve('age')
+    name = retrieve('name')
+    specialization = retrieve('specialization')
+    new_teacher = Teacher.new(specialization, age, name)
+    creator(@persons, new_teacher)
     puts "Teacher has been sucessfully created! \n\n"
   end
 
   def create_book
-    print 'Title: '
-    title = gets.chomp
-    print 'Author: '
-    author = gets.chomp
-    @books.push(Book.new(title, author))
+    title = retrieve('title')
+    author = retrieve('author')
+    new_book = Book.new(title, author)
+    creator(@books, new_book)
     puts "Book has been sucessfully created! \n\n"
   end
 
