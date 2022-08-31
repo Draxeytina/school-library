@@ -5,18 +5,24 @@ require './classes/person_menu'
 require './classes/create'
 require './classes/display'
 
+
 class App
   include Menu
   include PersonMenu
   include Create
   include Display
 
+
   def initialize
     @persons = []
     @books = []
     @rentals = []
     @classroom = Classroom.new('Programming')
+
+
   end
+
+
 
   def display_menu
     loop do
@@ -33,9 +39,7 @@ class App
         create_rental
       when 6
         list_all_rentals
-      else
-        break
-      end
+      
     end
   end
 end
