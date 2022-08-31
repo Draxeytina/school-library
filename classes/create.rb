@@ -8,40 +8,34 @@ module Create
     true if %w[y Y].include? response
   end
 
-  def retrieve(string)
-    label = string.capitalize
-    print "#{label}: "
-    gets.chomp
-  end
-
-  def creator(array, item)
-    array.push(item)
-  end
-
   def create_student
-    age = retrieve('age')
-    name = retrieve('name')
+    print 'Age: '
+    age = gets.chomp
+    print 'Name: '
+    name = gets.chomp
     print 'Has parent permission? [Y/N]: '
     parent_permission = check_response(gets.chomp)
-    new_student = Student.new(@classroom, age, name, parent_permission: parent_permission)
-    creator(@persons, new_student)
+    @persons.push(Student.new(@classroom, age, name, parent_permission: parent_permission))
     puts "Student has been successfully created! \n\n"
   end
 
   def create_teacher
-    age = retrieve('age')
-    name = retrieve('name')
-    specialization = retrieve('specialization')
-    new_teacher = Teacher.new(specialization, age, name, parent_permission: true)
-    creator(@persons, new_teacher)
+    print 'Age: '
+    age = gets.chomp
+    print 'Name: '
+    name = gets.chomp
+    print 'Specialization: '
+    specialization = gets.chomp
+    @persons.push(Teacher.new(specialization, age, name))
     puts "Teacher has been sucessfully created! \n\n"
   end
 
   def create_book
-    title = retrieve('title')
-    author = retrieve('author')
-    new_book = Book.new(title, author)
-    creator(@books, new_book)
+    print 'Title: '
+    title = gets.chomp
+    print 'Author: '
+    author = gets.chomp
+    @books.push(Book.new(title, author))
     puts "Book has been sucessfully created! \n\n"
   end
 
@@ -62,8 +56,7 @@ module Create
     puts 'Select person ID'
     @persons.each_with_index { |person, index| puts "#{index}: #{person.name}" }
     rental_people_id = gets.chomp.to_i
-    new_rental = Rental.new(@books[rent_book_id], @persons[rental_people_id], dated)
-    creator(@rentals, new_rental)
+    @rentals.push(Rental.new(@books[rent_book_id], @persons[rental_people_id], dated))
     puts "Rental created successfully! \n\n"
   end
 end
