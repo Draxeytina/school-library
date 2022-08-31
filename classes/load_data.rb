@@ -34,7 +34,8 @@ module LoadData
   def create_object_book(book)
     Book.new(
       book['title'],
-      book['author']
+      book['author'],
+      id: book['id']
     )
   end
 
