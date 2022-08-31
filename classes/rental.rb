@@ -12,4 +12,12 @@ class Rental
   def list_rentals
     "#{@date} - #{@book.title} by #{@book.author}"
   end
+
+  def to_hash
+    {
+      person_id: @person.id,
+      book_id: @book.id,
+      date: @date
+    }
+  end
 end
