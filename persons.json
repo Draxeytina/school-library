@@ -1,0 +1,34 @@
+[
+  {
+    "id": 823,
+    "age": "25",
+    "name": "dkjfldskg",
+    "parent_permission": true,
+    "classroom": "#<Classroom:0x00007f79a448a010>",
+    "class": "Student"
+  },
+  {
+    "id": 263,
+    "age": "30",
+    "name": "tinashe",
+    "parent_permission": true,
+    "specialization": "Ruby",
+    "class": "Teacher"
+  },
+  {
+    "id": 418,
+    "age": "28",
+    "name": "Emanual",
+    "parent_permission": true,
+    "specialization": "React",
+    "class": "Teacher"
+  },
+  {
+    "id": 758,
+    "age": "20",
+    "name": "worash",
+    "parent_permission": true,
+    "classroom": "#<Classroom:0x00007f2860f92240>",
+    "class": "Student"
+  }
+]

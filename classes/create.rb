@@ -32,7 +32,7 @@ module Create
     age = retrieve('age')
     name = retrieve('name')
     specialization = retrieve('specialization')
-    new_teacher = Teacher.new(specialization, age, name, parent_permission: true)
+    new_teacher = Teacher.new(specialization, age, name)
     creator(@persons, new_teacher)
     puts "Teacher has been sucessfully created! \n\n"
   end
@@ -62,8 +62,7 @@ module Create
     puts 'Select person ID'
     @persons.each_with_index { |person, index| puts "#{index}: #{person.name}" }
     rental_people_id = gets.chomp.to_i
-    new_rental = Rental.new(@books[rent_book_id], @persons[rental_people_id], dated)
-    creator(@rentals, new_rental)
+    @rentals.push(Rental.new(@books[rent_book_id], @persons[rental_people_id], dated))
     puts "Rental created successfully! \n\n"
   end
 end

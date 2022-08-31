@@ -5,9 +5,9 @@ class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id, :rentals
 
-  def initialize(age, name = 'Unknown', parent_permission: true)
+  def initialize(age, name = 'Unknown', parent_permission: true, id: nil)
     super()
-    @id = Random.rand(1..1000)
+    @id = id.nil? ? Random.rand(1..1000) : id
     @age = age
     @name = name
     @parent_permission = parent_permission
@@ -24,6 +24,17 @@ class Person < Nameable
 
   def add_rental(book, date)
     Rental.new(book, self, date)
+  end
+
+  def to_hash
+    {
+      id: @id,
+      age: @age,
+      name: @name,
+      parent_permission: @parent_permission,
+      class: 'Person'
+
+    }
   end
 
   private
