@@ -50,4 +50,11 @@ describe Solver do
       expect(solver.fizzbuzz(N)).to eql 'fizzbuzz'
     end
   end
+
+  context 'Test fizzbuzz method' do
+    N = 7
+    it 'should return "7"' do
+      expect(solver.fizzbuzz(N)).to eql '7'
+    end
+  end
 end
