@@ -11,5 +11,9 @@ describe Solver do
     it 'should return 1' do
       expect(solver.factorial(number)).to eql 1
     end
+    positiveNumber = 5
+    it 'should return 120' do
+      expect(solver.factorial(positiveNumber)).to eql 120
+    end
   end
 end
