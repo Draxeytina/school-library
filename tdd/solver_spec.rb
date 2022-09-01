@@ -23,7 +23,7 @@ describe Solver do
   context 'Test reverse method' do
     word = 'hello'
     it 'should return olleh' do
-      expect { solver.reverse(word) }.to eql 'olleh'
+      expect(solver.reverse(word)).to eql 'olleh'
     end
   end
 end

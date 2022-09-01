@@ -9,7 +9,8 @@ class Solver
     end
   end
 
-  def reverse
+  def reverse(word)
+    return word.reverse!
   end
 
   def fizzbuzz
@@ -17,4 +18,4 @@ class Solver
 end
 
 # solverX = Solver.new
-# puts solverX.factorial(5)
+# puts solverX.reverse('hello')
