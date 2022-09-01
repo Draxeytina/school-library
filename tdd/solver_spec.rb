@@ -36,10 +36,18 @@ describe Solver do
       expect(solver.fizzbuzz(N)).to eql 'fizz'
     end
   end
+
   context 'Test fizzbuzz method' do
     N = 5
     it 'should return buzz' do
       expect(solver.fizzbuzz(N)).to eql 'buzz'
+    end
+  end
+  
+  context 'Test fizzbuzz method' do
+    N = 15
+    it 'should return fizzbuzz' do
+      expect(solver.fizzbuzz(N)).to eql 'fizzbuzz'
     end
   end
 end
