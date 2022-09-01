@@ -27,3 +27,13 @@ describe Solver do
     end
   end
 end
+
+describe Solver do
+  solver = Solver.new
+  context 'Test fizzbuzz method' do
+    N = 3
+    it 'should return fizz' do
+      expect(solver.fizzbuzz(N)).to eql 'fizz'
+    end
+  end
+end
