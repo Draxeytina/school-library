@@ -17,3 +17,13 @@ describe Solver do
     end
   end
 end
+
+describe Solver do
+  solver = Solver.new
+  context 'Test reverse method' do
+    word = 'hello'
+    it 'should return olleh' do
+      expect { solver.reverse(word) }.to eql 'olleh'
+    end
+  end
+end
