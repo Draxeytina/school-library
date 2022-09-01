@@ -6,7 +6,7 @@ require './classes/person'
 describe Rental do
   context 'Test rental initialization  with data' do
     it 'should  be right data' do
-      student = Student.new("Section N", 14, 'Joni', id: 7000)
+      student = Student.new('Section N', 14, 'Joni', id: 7000)
       book = Book.new('Ruby for Dummy', 'Griel')
       date = '2022-05-08'
 
@@ -20,8 +20,8 @@ describe Rental do
 
   context 'test to_hash method' do
     it 'should correct hash of the instance' do
-      student = Student.new('Section N', 16, 'Worash',parent_permission:false, id: 8000)
-      book = Book.new('Introduction to java', 'Bose doya', id:  900)
+      student = Student.new('Section N', 16, 'Worash', parent_permission: false, id: 8000)
+      book = Book.new('Introduction to java', 'Bose doya', id: 900)
       date = '2022-07-05'
 
       rental = Rental.new(book, student, date)
@@ -36,8 +36,8 @@ describe Rental do
   end
 
   context 'rental gets added to the relevant person and book' do
-    student = Student.new('Section N', 16, 'Worash',parent_permission:false, id: 8000)
-    book = Book.new('Introduction to java', 'Bose doya', id:  900)
+    student = Student.new('Section N', 16, 'Worash', parent_permission: false, id: 8000)
+    book = Book.new('Introduction to java', 'Bose doya', id: 900)
     date = '2022-07-05'
 
     rental = Rental.new(book, student, date)
