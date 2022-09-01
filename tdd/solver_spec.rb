@@ -31,30 +31,30 @@ end
 describe Solver do
   solver = Solver.new
   context 'Test fizzbuzz method' do
-    N = 3
+    n = 3
     it 'should return fizz' do
-      expect(solver.fizzbuzz(N)).to eql 'fizz'
+      expect(solver.fizzbuzz(n)).to eql 'fizz'
     end
   end
 
   context 'Test fizzbuzz method' do
-    N = 5
+    n = 5
     it 'should return buzz' do
-      expect(solver.fizzbuzz(N)).to eql 'buzz'
+      expect(solver.fizzbuzz(n)).to eql 'buzz'
     end
   end
   
   context 'Test fizzbuzz method' do
-    N = 15
+    n = 15
     it 'should return fizzbuzz' do
-      expect(solver.fizzbuzz(N)).to eql 'fizzbuzz'
+      expect(solver.fizzbuzz(n)).to eql 'fizzbuzz'
     end
   end
 
   context 'Test fizzbuzz method' do
-    N = 7
+    n = 7
     it 'should return "7"' do
-      expect(solver.fizzbuzz(N)).to eql '7'
+      expect(solver.fizzbuzz(n)).to eql '7'
     end
   end
 end
