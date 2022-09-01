@@ -2,9 +2,10 @@ class Solver
   def factorial(number)
     if number < 0 then 
       raise ArgumentError.new 'Negative values not permitted'
-      # raise "Unhandled exception. Negative value not permitted"
-    elsif number == 0 then
+    elsif number == 0 || number == 1 then
       return 1
+    else
+      return number * factorial(number-1) if number > 0
     end
   end
 
@@ -16,4 +17,4 @@ class Solver
 end
 
 # solverX = Solver.new
-# solverX.factorial(-5)
+# puts solverX.factorial(5)
