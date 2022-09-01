@@ -11,5 +11,14 @@ describe Person do
       expect(person.parent_permission).to eql(true)
       expect(person.can_use_services?).to eql(true)
     end
+
+    it 'has given name, age and permission cannot use services' do
+      person = Person.new(17, 'Michael Faraday', parent_permission: false)
+      expect(person.age).to eql(17)
+      expect(person.name).to eql('Michael Faraday')
+      expect(person.correct_name).to eql(person.name)
+      expect(person.parent_permission).to eql(false)
+      expect(person.can_use_services?).to eql(false)
+    end
   end
 end
