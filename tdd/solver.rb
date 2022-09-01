@@ -13,9 +13,15 @@ class Solver
     return word.reverse!
   end
 
-  def fizzbuzz
+  def fizzbuzz(n)
+    if n.modulo(15) == 0
+      return 'fizzbuzz'
+    elsif n.modulo(5) == 0
+      return 'buzz'
+    elsif n.modulo(3) == 0
+      return 'fizz'
+    else
+      return "#{n}"
+    end
   end
 end
-
-# solverX = Solver.new
-# puts solverX.reverse('hello')
