@@ -20,5 +20,15 @@ describe Person do
       expect(person.parent_permission).to eql(false)
       expect(person.can_use_services?).to eql(false)
     end
+
+    it 'creates rental' do
+      book = Book.new('Rich Dad Poor Dad', 'Robert Kiyosaki')
+      person = Person.new(12, 'michael', parent_permission: false)
+      rental = book.add_rental(person, '2022-08-31')
+      expect(rental.person.id).to eql(person.id)
+      expect(rental.book.id).to eql(book.id)
+    end
+
+
   end
 end
