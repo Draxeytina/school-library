@@ -1,7 +1,6 @@
 require_relative '../classes/book'
 require_relative '../classes/person'
 
-
 describe Book do
   describe 'creates book given author and title' do
     it 'has given author and title' do
@@ -15,6 +14,6 @@ describe Book do
       rental = book.add_rental(person, '2022-08-31')
       expect(rental.person.id).to eql(person.id)
       expect(rental.book.id).to eql(book.id)
-    end    
+    end
   end
 end

@@ -14,7 +14,7 @@ describe BaseDecorator do
       person = Person.new(12, 'michael', parent_permission: false)
       base_decorator = BaseDecorator.new(person)
       expect(base_decorator.correct_name).to eql('michael')
-    end    
+    end
   end
 end
 
