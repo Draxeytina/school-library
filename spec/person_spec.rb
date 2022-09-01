@@ -29,6 +29,16 @@ describe Person do
       expect(rental.book.id).to eql(book.id)
     end
 
-
+    it 'hashes correctly' do
+      person = Person.new(17, 'Michael Faraday', parent_permission: false)
+      hash = {
+        id: person.id,
+        age: person.age,
+        name: person.name,
+        parent_permission: person.parent_permission,
+        class: 'Person'
+      }
+      expect(person.to_hash).to eql(hash)
+    end
   end
 end
