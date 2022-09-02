@@ -27,6 +27,9 @@ describe Solver do
     it 'should return olleh' do
       expect(solver.reverse(word)).to eql 'olleh'
     end
+    it "should raise error when argument is not string" do
+      expect(solver.reverse(true)).to  raise_error(ArgumentError)
+    end
   end
 end
 
