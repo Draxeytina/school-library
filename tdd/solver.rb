@@ -1,31 +1,27 @@
 class Solver
   def factorial(number)
+    raise ArgumentError, 'Negative values not permitted' unless number.instance_of?(Integer) && number >= 0
 
-    unless number.instance_of?(Integer) && number >= 0
-      raise ArgumentError.new 'Negative values not permitted'
-    end
- 
-    return 1 if number == 0 
-   
-    return number * factorial(number-1) if number > 0
-  
+    return 1 if number.zero?
+
+    return number * factorial(number - 1) if number.positive?
   end
 
   def reverse(word)
-    raise ArgumentError.new , 'Argument should be a string.' unless word.instance_of?(String)
+    raise ArgumentError.new, 'Argument should be a string.' unless word.instance_of?(String)
 
     word.reverse!
   end
 
-  def fizzbuzz(n)
-    if n.modulo(15) == 0
-      return 'fizzbuzz'
-    elsif n.modulo(5) == 0
-      return 'buzz'
-    elsif n.modulo(3) == 0
-      return 'fizz'
+  def fizzbuzz(number)
+    if number.modulo(15).zero?
+      'fizzbuzz'
+    elsif number.modulo(5).zero?
+      'buzz'
+    elsif number.modulo(3).zero?
+      'fizz'
     else
-      return "#{n}"
+      n.to_s
     end
   end
 end
