@@ -12,7 +12,9 @@ class Solver
   end
 
   def reverse(word)
-    return word.reverse!
+    raise ArgumentError.new , 'Argument should be a string.' unless word.instance_of?(String)
+
+    word.reverse!
   end
 
   def fizzbuzz(n)
