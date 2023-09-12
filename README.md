@@ -4,7 +4,8 @@ School Library App is a console app that lets a user you manage a school library
 
 ## Built With:
 - Ruby
-
+- PostgreSQL
+  
 ## Getting Started:
 To access and change the code on your computer (using GIT):
 > Note: if you don't use git, you can download the ZIP of this repository by clicking on the "Code" button above the files list.
